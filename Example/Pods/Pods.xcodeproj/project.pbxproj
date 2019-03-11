@@ -20,11 +20,11 @@
 		185E9CC6223660C500CF96DD /* ErrorUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CBF223660C500CF96DD /* ErrorUserInfo.h */; };
 		185E9CC7223660C500CF96DD /* ErrorUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CBF223660C500CF96DD /* ErrorUserInfo.h */; };
 		185E9CC8223660C500CF96DD /* ErrorUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CBF223660C500CF96DD /* ErrorUserInfo.h */; };
-		185E9CC9223660C500CF96DD /* ErrorUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CBF223660C500CF96DD /* ErrorUserInfo.h */; };
+		185E9CC9223660C500CF96DD /* ErrorUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CBF223660C500CF96DD /* ErrorUserInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		185E9CCA223660C500CF96DD /* APIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CC0223660C500CF96DD /* APIManager.h */; };
 		185E9CCB223660C500CF96DD /* APIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CC0223660C500CF96DD /* APIManager.h */; };
 		185E9CCC223660C500CF96DD /* APIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CC0223660C500CF96DD /* APIManager.h */; };
-		185E9CCD223660C500CF96DD /* APIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CC0223660C500CF96DD /* APIManager.h */; };
+		185E9CCD223660C500CF96DD /* APIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CC0223660C500CF96DD /* APIManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		185E9CCE223660C500CF96DD /* ErrorUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E9CC1223660C500CF96DD /* ErrorUserInfo.m */; };
 		185E9CCF223660C500CF96DD /* ErrorUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E9CC1223660C500CF96DD /* ErrorUserInfo.m */; };
 		185E9CD0223660C500CF96DD /* ErrorUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E9CC1223660C500CF96DD /* ErrorUserInfo.m */; };
