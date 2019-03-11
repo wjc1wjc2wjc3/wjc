@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "APIManager.h"
 
 FOUNDATION_EXPORT double wjcVersionNumber;
 FOUNDATION_EXPORT const unsigned char wjcVersionString[];

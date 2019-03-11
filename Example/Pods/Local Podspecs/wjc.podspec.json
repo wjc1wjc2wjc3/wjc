@@ -1,8 +1,8 @@
 {
   "name": "wjc",
-  "version": "0.1.0",
-  "summary": "A short description of wjc.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "0.4.0",
+  "summary": "generate tags and improve",
+  "description": "Add long description of the pod here.",
   "homepage": "https://github.com/wjc1wjc2wjc3/wjc",
   "license": {
     "type": "MIT",
@@ -13,10 +13,25 @@
   },
   "source": {
     "git": "https://github.com/wjc1wjc2wjc3/wjc.git",
-    "tag": "0.1.0"
+    "tag": "0.4.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "wjc/Classes/**/*"
+  "frameworks": [
+    "UIKit",
+    "MapKit",
+    "Foundation"
+  ],
+  "dependencies": {
+    "AFNetworking": [
+      "~> 2.3"
+    ],
+    "MJExtension": [
+
+    ]
+  },
+  "source_files": "wjc/Classes/**/*",
+  "requires_arc": true,
+  "public_header_files": "wjc/Classes/*.h"
 }

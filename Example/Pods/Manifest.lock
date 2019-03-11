@@ -1,27 +1,64 @@
 PODS:
+  - AFNetworking (2.7.0):
+    - AFNetworking/NSURLConnection (= 2.7.0)
+    - AFNetworking/NSURLSession (= 2.7.0)
+    - AFNetworking/Reachability (= 2.7.0)
+    - AFNetworking/Security (= 2.7.0)
+    - AFNetworking/Serialization (= 2.7.0)
+    - AFNetworking/UIKit (= 2.7.0)
+  - AFNetworking/NSURLConnection (2.7.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.7.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.7.0)
+  - AFNetworking/Security (2.7.0)
+  - AFNetworking/Serialization (2.7.0)
+  - AFNetworking/UIKit (2.7.0):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Expecta (1.0.6)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - wjc (0.1.0)
+  - MJExtension (3.0.15.1)
+  - Specta (1.0.7)
+  - wjc (0.4.0):
+    - AFNetworking (~> 2.3)
+    - MJExtension
 
 DEPENDENCIES:
+  - AFNetworking
+  - Expecta
   - FBSnapshotTestCase
+  - Specta
   - wjc (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - Expecta
     - FBSnapshotTestCase
+    - MJExtension
+    - Specta
 
 EXTERNAL SOURCES:
   wjc:
     :path: "../"
 
 SPEC CHECKSUMS:
+  AFNetworking: 8dd5f9b9691e09186393069a12cc3b5ed7c8b511
+  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  wjc: 821bd4b444ce015486bafe4f0b7c34196c1ddf2b
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
+  wjc: dfaee112e7468d820e28c01129a052be911b3fe9
 
-PODFILE CHECKSUM: 98750ae4a536888fce2d72819419c5342bbc4689
+PODFILE CHECKSUM: 0c9f613cf817ba225bfe34c86375626873a7a626
 
-COCOAPODS: 1.7.0.beta.2
+COCOAPODS: 1.7.0.beta.1

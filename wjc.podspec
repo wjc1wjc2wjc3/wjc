@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'wjc'
-  s.version          = '0.3.0'
+  s.version          = '0.4.0'
   s.summary          = 'generate tags and improve'
 
 # This description is used to generate tags and improve search results.
@@ -26,7 +26,11 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
+  
+  s.frameworks = 'UIKit', 'MapKit','Foundation'
+  s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'MJExtension'
+  
   s.source_files = 'wjc/Classes/**/*'
   s.requires_arc = true
   # s.resource_bundles = {
@@ -35,7 +39,5 @@ Pod::Spec.new do |s|
 
   s.public_header_files = 'wjc/Classes/*.h'
   #s.public_header_files = 'Pod/Classes/**/*.h','Pod/Classes/*.h'
-  s.frameworks = 'UIKit', 'MapKit','Foundation'
-  s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'MJExtension'
+
 end
