@@ -11,12 +11,24 @@
 		05FB3451C9EAFF6BA5F320BEF6F679D0 /* Pods-wjc_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9640BBE294011FFEBFEE21C7C8A59A /* Pods-wjc_Tests-dummy.m */; };
 		0DD4183089B3720B8B22DE275C5DEFD6 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D2DF1ABBBD85F5E079D7D0EB5479BC /* SwiftSupport.swift */; };
 		13A0EB9B5322E8D6E6F614D24186057C /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = EF53D290F564A9B10CEF56C9DC2010F2 /* UIImage+Compare.m */; };
-		185E9CB622365ECD00CF96DD /* APIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CB222365ECD00CF96DD /* APIManager.h */; };
-		185E9CB722365ECD00CF96DD /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E9CB322365ECD00CF96DD /* APIManager.m */; };
-		185E9CB822365ECD00CF96DD /* ErrorUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CB422365ECD00CF96DD /* ErrorUserInfo.h */; };
-		185E9CB922365ECD00CF96DD /* ErrorUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E9CB522365ECD00CF96DD /* ErrorUserInfo.m */; };
 		185E9CBC22365EDB00CF96DD /* TestAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CBA22365EDB00CF96DD /* TestAPI.h */; };
 		185E9CBD22365EDB00CF96DD /* TestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E9CBB22365EDB00CF96DD /* TestAPI.m */; };
+		185E9CC2223660C500CF96DD /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E9CBE223660C500CF96DD /* APIManager.m */; };
+		185E9CC3223660C500CF96DD /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E9CBE223660C500CF96DD /* APIManager.m */; };
+		185E9CC4223660C500CF96DD /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E9CBE223660C500CF96DD /* APIManager.m */; };
+		185E9CC5223660C500CF96DD /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E9CBE223660C500CF96DD /* APIManager.m */; };
+		185E9CC6223660C500CF96DD /* ErrorUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CBF223660C500CF96DD /* ErrorUserInfo.h */; };
+		185E9CC7223660C500CF96DD /* ErrorUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CBF223660C500CF96DD /* ErrorUserInfo.h */; };
+		185E9CC8223660C500CF96DD /* ErrorUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CBF223660C500CF96DD /* ErrorUserInfo.h */; };
+		185E9CC9223660C500CF96DD /* ErrorUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CBF223660C500CF96DD /* ErrorUserInfo.h */; };
+		185E9CCA223660C500CF96DD /* APIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CC0223660C500CF96DD /* APIManager.h */; };
+		185E9CCB223660C500CF96DD /* APIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CC0223660C500CF96DD /* APIManager.h */; };
+		185E9CCC223660C500CF96DD /* APIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CC0223660C500CF96DD /* APIManager.h */; };
+		185E9CCD223660C500CF96DD /* APIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 185E9CC0223660C500CF96DD /* APIManager.h */; };
+		185E9CCE223660C500CF96DD /* ErrorUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E9CC1223660C500CF96DD /* ErrorUserInfo.m */; };
+		185E9CCF223660C500CF96DD /* ErrorUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E9CC1223660C500CF96DD /* ErrorUserInfo.m */; };
+		185E9CD0223660C500CF96DD /* ErrorUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E9CC1223660C500CF96DD /* ErrorUserInfo.m */; };
+		185E9CD1223660C500CF96DD /* ErrorUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E9CC1223660C500CF96DD /* ErrorUserInfo.m */; };
 		1BA8502BC67A7C596CAC25AF208AD2D2 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A83AE4362CF1D4764E00E4602A2D648 /* FBSnapshotTestCase-dummy.m */; };
 		1E2A893F6AEA53172BA022B76B228C49 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E29C50D3CDB46CBCBD20AFA13EB3D8D /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23D8C6ACC6148B1D44AD8F29C7A93D7D /* wjc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3035720FCBE97835E5E558A6A0BC97C1 /* wjc-dummy.m */; };
@@ -75,12 +87,12 @@
 		0993A2D890D7FEBF169E7143BBE704ED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0A3ACA72AE9B776E644F6D159AB3E80B /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		13C8BBFE2D9E3A9C566221B1DE04E91C /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
-		185E9CB222365ECD00CF96DD /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
-		185E9CB322365ECD00CF96DD /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
-		185E9CB422365ECD00CF96DD /* ErrorUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorUserInfo.h; sourceTree = "<group>"; };
-		185E9CB522365ECD00CF96DD /* ErrorUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorUserInfo.m; sourceTree = "<group>"; };
 		185E9CBA22365EDB00CF96DD /* TestAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAPI.h; sourceTree = "<group>"; };
 		185E9CBB22365EDB00CF96DD /* TestAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAPI.m; sourceTree = "<group>"; };
+		185E9CBE223660C500CF96DD /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIManager.m; path = wjc/Classes/APIManager.m; sourceTree = "<group>"; };
+		185E9CBF223660C500CF96DD /* ErrorUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorUserInfo.h; path = wjc/Classes/ErrorUserInfo.h; sourceTree = "<group>"; };
+		185E9CC0223660C500CF96DD /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIManager.h; path = wjc/Classes/APIManager.h; sourceTree = "<group>"; };
+		185E9CC1223660C500CF96DD /* ErrorUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ErrorUserInfo.m; path = wjc/Classes/ErrorUserInfo.m; sourceTree = "<group>"; };
 		1B8ABEEA76ECDF1975B6D0787700F929 /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
 		22DCC352B84660881C155EF4CA5BBD88 /* Pods-wjc_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-wjc_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		2B18F43D1389FD6AAE0E6D3DF61E24E8 /* wjc-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "wjc-prefix.pch"; sourceTree = "<group>"; };
@@ -200,10 +212,10 @@
 		31D314D465F256712B032DBC535E82DD /* wjc */ = {
 			isa = PBXGroup;
 			children = (
-				185E9CB222365ECD00CF96DD /* APIManager.h */,
-				185E9CB322365ECD00CF96DD /* APIManager.m */,
-				185E9CB422365ECD00CF96DD /* ErrorUserInfo.h */,
-				185E9CB522365ECD00CF96DD /* ErrorUserInfo.m */,
+				185E9CC0223660C500CF96DD /* APIManager.h */,
+				185E9CBE223660C500CF96DD /* APIManager.m */,
+				185E9CBF223660C500CF96DD /* ErrorUserInfo.h */,
+				185E9CC1223660C500CF96DD /* ErrorUserInfo.m */,
 				185E9CB122365ECD00CF96DD /* NetWork */,
 				5EF6559D3E271441AD267B8E3B2AD89B /* ReplaceMe.m */,
 				96C317FC8A99BFE383FF84FA1A63E79A /* Pod */,
@@ -387,6 +399,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185E9CC9223660C500CF96DD /* ErrorUserInfo.h in Headers */,
+				185E9CCD223660C500CF96DD /* APIManager.h in Headers */,
 				CB5C39F78807A319E6400A9BF4E8680F /* wjc-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +409,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185E9CC8223660C500CF96DD /* ErrorUserInfo.h in Headers */,
+				185E9CCC223660C500CF96DD /* APIManager.h in Headers */,
 				05188ECA48078D77622AF5C7760BFFB8 /* Pods-wjc_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +419,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185E9CC7223660C500CF96DD /* ErrorUserInfo.h in Headers */,
+				185E9CCB223660C500CF96DD /* APIManager.h in Headers */,
 				E5A39D9DB30DD64319165CEB98029527 /* Pods-wjc_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,11 +433,11 @@
 				1E2A893F6AEA53172BA022B76B228C49 /* FBSnapshotTestCase.h in Headers */,
 				791C03EFFF06649DA66FAF30BC35CD16 /* FBSnapshotTestCasePlatform.h in Headers */,
 				185E9CBC22365EDB00CF96DD /* TestAPI.h in Headers */,
+				185E9CC6223660C500CF96DD /* ErrorUserInfo.h in Headers */,
 				D4AD6B2A1D9F633251F4CCE647A82052 /* FBSnapshotTestController.h in Headers */,
 				6D37D81E7017C1D35A7F68314FDF04B7 /* UIApplication+StrictKeyWindow.h in Headers */,
-				185E9CB822365ECD00CF96DD /* ErrorUserInfo.h in Headers */,
+				185E9CCA223660C500CF96DD /* APIManager.h in Headers */,
 				BE1CC07148196181546C119716D4376C /* UIImage+Compare.h in Headers */,
-				185E9CB622365ECD00CF96DD /* APIManager.h in Headers */,
 				6C521CCD8750EEEEA73708F8C1D89916 /* UIImage+Diff.h in Headers */,
 				F7D29D32A183783FB4C32DBFE0AA3F07 /* UIImage+Snapshot.h in Headers */,
 			);
@@ -570,6 +588,8 @@
 			files = (
 				79DF33A8CB9D8376EE5EC91657B6891B /* ReplaceMe.m in Sources */,
 				23D8C6ACC6148B1D44AD8F29C7A93D7D /* wjc-dummy.m in Sources */,
+				185E9CC5223660C500CF96DD /* APIManager.m in Sources */,
+				185E9CD1223660C500CF96DD /* ErrorUserInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +597,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185E9CCF223660C500CF96DD /* ErrorUserInfo.m in Sources */,
+				185E9CC3223660C500CF96DD /* APIManager.m in Sources */,
 				DA04850D3171140A6F04F1800B6E2A60 /* Pods-wjc_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,15 +610,15 @@
 				1BA8502BC67A7C596CAC25AF208AD2D2 /* FBSnapshotTestCase-dummy.m in Sources */,
 				AB8A64DEACDDC74D67BD635B2D02627F /* FBSnapshotTestCase.m in Sources */,
 				185E9CBD22365EDB00CF96DD /* TestAPI.m in Sources */,
+				185E9CCE223660C500CF96DD /* ErrorUserInfo.m in Sources */,
 				35D78A991740568175DCA9F6519A54EB /* FBSnapshotTestCasePlatform.m in Sources */,
 				929188AFEF467CF1FDD25C2BCDB6BFE9 /* FBSnapshotTestController.m in Sources */,
 				0DD4183089B3720B8B22DE275C5DEFD6 /* SwiftSupport.swift in Sources */,
 				D84D626FC6A666332367C6375B8D6D1E /* UIApplication+StrictKeyWindow.m in Sources */,
-				185E9CB922365ECD00CF96DD /* ErrorUserInfo.m in Sources */,
-				185E9CB722365ECD00CF96DD /* APIManager.m in Sources */,
 				13A0EB9B5322E8D6E6F614D24186057C /* UIImage+Compare.m in Sources */,
 				2F07378A994C46D715AE555AC8629602 /* UIImage+Diff.m in Sources */,
 				4CF8A6092DC4EEF90367C6C6440DEE86 /* UIImage+Snapshot.m in Sources */,
+				185E9CC2223660C500CF96DD /* APIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +626,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185E9CD0223660C500CF96DD /* ErrorUserInfo.m in Sources */,
+				185E9CC4223660C500CF96DD /* APIManager.m in Sources */,
 				05FB3451C9EAFF6BA5F320BEF6F679D0 /* Pods-wjc_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
