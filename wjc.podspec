@@ -33,8 +33,9 @@ Pod::Spec.new do |s|
   #   'wjc' => ['wjc/Assets/*.png']
   # }
 
-  s.public_header_files = 'Pod/../../../wjc/Classes/*.h'
+  s.public_header_files = 'wjc/Classes/*.h'
   #s.public_header_files = 'Pod/Classes/**/*.h','Pod/Classes/*.h'
   s.frameworks = 'UIKit', 'MapKit','Foundation'
   s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'MJExtension'
 end
