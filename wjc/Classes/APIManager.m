@@ -73,9 +73,9 @@ NSString *const kAFNetworkStateChange = @"AFNetworkStateChange";
     APIManager *manager = [APIManager sharedManager];
 
     return [manager POST:URLString parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
+        success(task,responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        failure(task,error);
     }];
     
     //todo 统一封装请求参数
@@ -145,9 +145,9 @@ NSString *const kAFNetworkStateChange = @"AFNetworkStateChange";
     APIManager *manager = [APIManager sharedManager];
     
     return [manager GET:URLString parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
+        success(task,responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        failure(task,error);
     }];
 //    return [manager GET:URLString parameters:parameters  progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
 //        //todo
@@ -173,11 +173,18 @@ NSString *const kAFNetworkStateChange = @"AFNetworkStateChange";
 
 {
     
-    AFHTTPRequestSerializer *serializer = [AFHTTPRequestSerializer serializer];
-    NSMutableURLRequest *request =[serializer requestWithMethod:@"POST" URLString:requestURLString parameters:parameters error:nil];
+//    AFHTTPRequestSerializer *serializer = [AFHTTPRequestSerializer serializer];
+//    NSMutableURLRequest *request =[serializer requestWithMethod:@"POST" URLString:requestURLString parameters:parameters error:nil];
 
 
     NSURLSessionDownloadTask *task = nil;
+//    [[AFHTTPSessionManager manager] downloadTaskWithRequest:request progress:(NSProgress *__autoreleasing *)progress{
+//
+//    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+//
+//    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+//
+//    }];
 //    task = [[AFHTTPSessionManager manager] downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
 //        progress(downloadProgress);
 //    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
