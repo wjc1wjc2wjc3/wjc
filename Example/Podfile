@@ -9,5 +9,7 @@ target 'wjc_Example' do
     inherit! :search_paths
 
     pod 'FBSnapshotTestCase'
+    pod 'Specta'
+    pod 'Expecta'
   end
 end
