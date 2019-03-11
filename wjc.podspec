@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'wjc'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of wjc.'
+  s.summary          = 'generate tags and improve'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -33,7 +33,8 @@ Pod::Spec.new do |s|
   #   'wjc' => ['wjc/Assets/*.png']
   # }
 
-  s.public_header_files = 'Pod/Classes/**/*.h','Pod/Classes/*.h'
+  s.public_header_files = 'wjc/Classes/**/*.{h}'
+  #s.public_header_files = 'Pod/Classes/**/*.h','Pod/Classes/*.h'
   s.frameworks = 'UIKit', 'MapKit','Foundation'
   s.dependency 'AFNetworking', '~> 2.3'
 end
