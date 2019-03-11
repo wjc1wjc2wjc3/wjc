@@ -7,7 +7,7 @@
 //
 
 #import "APIManager.h"
-#import "ErrorUserInfo.h"
+//#import "ErrorUserInfo.h"
 
 static dispatch_once_t onceToken;
 static APIManager *_sharedManager = nil;
@@ -79,7 +79,7 @@ NSString *const kAFNetworkStateChange = @"AFNetworkStateChange";
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         //todo 统一处理错误
         [MBManager hideAlert];
-        ErrorUserInfo *eUI = [[ErrorUserInfo alloc] initWithDictionary:error.userInfo];
+//        ErrorUserInfo *eUI = [[ErrorUserInfo alloc] initWithDictionary:error.userInfo];
         if (_sharedManager.reachabilityStatus == AFNetworkReachabilityStatusNotReachable || eUI.bCannotConnectServer) {
             failure(task,error);
         }
