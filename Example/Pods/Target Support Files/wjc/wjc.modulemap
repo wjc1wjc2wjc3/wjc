@@ -1,0 +1,6 @@
+framework module wjc {
+  umbrella header "wjc-umbrella.h"
+
+  export *
+  module * { export * }
+}
