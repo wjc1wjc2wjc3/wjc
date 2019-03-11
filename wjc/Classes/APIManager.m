@@ -20,7 +20,7 @@ NSString *const kAFNetworkStateChange = @"AFNetworkStateChange";
     
     dispatch_once(&onceToken, ^{
         //设置服务器根地址
-        _sharedManager = [[APIManager alloc] initWithBaseURL:[NSURL URLWithString:[URI_REQUEST stringByAppendingString:URI_ROOT]]];
+        _sharedManager = [[APIManager alloc] initWithBaseURL:[NSURL URLWithString:@""]];
         AFSecurityPolicy *sec = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
         [sec setAllowInvalidCertificates:YES];
         [sec setValidatesDomainName:NO];
@@ -33,14 +33,16 @@ NSString *const kAFNetworkStateChange = @"AFNetworkStateChange";
             [[NSNotificationCenter defaultCenter] postNotificationName:kAFNetworkStateChange object:userInfo];
             switch (status) {
                 case AFNetworkReachabilityStatusReachableViaWWAN:
-                    DLog(@"3G网络已连接");
+//                    DLog(@"3G网络已连接");
+                    NSLog(@"3G网络已连接");
                     break;
                     
                 case AFNetworkReachabilityStatusReachableViaWiFi:
-                    DLog(@"WiFi网络已连接");
+//                    DLog(@"WiFi网络已连接");
+                    NSLog(@"WiFi网络已连接");
                     break;
                 case AFNetworkReachabilityStatusNotReachable:
-                    DLog(@"网络连接失败");
+                    NSLog(@"网络连接失败");
                     break;
                     
                 default:
@@ -70,24 +72,30 @@ NSString *const kAFNetworkStateChange = @"AFNetworkStateChange";
                          failure:(void (^)(NSURLSessionDataTask * _Nullable task, NSError *_Nonnull error))failure{
     APIManager *manager = [APIManager sharedManager];
 
-    //todo 统一封装请求参数
-    return [manager POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-        //todo 统一处理响应数据
-        
-        success(task,responseObject);
+    return [manager POST:URLString parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        //todo 统一处理错误
-        [MBManager hideAlert];
-//        ErrorUserInfo *eUI = [[ErrorUserInfo alloc] initWithDictionary:error.userInfo];
-        if (_sharedManager.reachabilityStatus == AFNetworkReachabilityStatusNotReachable || eUI.bCannotConnectServer) {
-            failure(task,error);
-        }
-        else
-        {
-//            [MBManager showBriefAlert:LOCALIZEDSTRING(@"paramError")];
-        }
+        
     }];
+    
+    //todo 统一封装请求参数
+//    return [manager POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+//        //todo 统一处理响应数据
+//
+//        success(task,responseObject);
+//
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        //todo 统一处理错误
+////        [MBManager hideAlert];
+////        ErrorUserInfo *eUI = [[ErrorUserInfo alloc] initWithDictionary:error.userInfo];
+//        if (_sharedManager.reachabilityStatus == AFNetworkReachabilityStatusNotReachable /*|| eUI.bCannotConnectServer*/) {
+//            failure(task,error);
+//        }
+//        else
+//        {
+////            [MBManager showBriefAlert:LOCALIZEDSTRING(@"paramError")];
+//        }
+//    }];
 }
 
 + (NSURLSessionDataTask *)SafePOST:(NSString *)URLString
@@ -99,25 +107,35 @@ NSString *const kAFNetworkStateChange = @"AFNetworkStateChange";
 
     
     APIManager *manager = [APIManager sharedManager];
+
     return [manager POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-        
-        if (formatDataBlock) {
-            formatDataBlock(formData);
-        }
-        
-    } progress:^(NSProgress * _Nonnull progress) {
-        uploadProgress(progress);
+                if (formatDataBlock) {
+                    formatDataBlock(formData);
+                }
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        success(task,responseObject);
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        if (_sharedManager.reachabilityStatus == AFNetworkReachabilityStatusNotReachable) {
-            failure(task,error);
-        }
-        else
-        {
-//            [MBManager showBriefAlert:LOCALIZEDSTRING(@"paramError")];
-        }
+        
     }];
+//    return [manager POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+//
+//        if (formatDataBlock) {
+//            formatDataBlock(formData);
+//        }
+//
+//    } progress:^(NSProgress * _Nonnull progress) {
+//        uploadProgress(progress);
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        success(task,responseObject);
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        if (_sharedManager.reachabilityStatus == AFNetworkReachabilityStatusNotReachable) {
+//            failure(task,error);
+//        }
+//        else
+//        {
+////            [MBManager showBriefAlert:LOCALIZEDSTRING(@"paramError")];
+//        }
+//    }];
 }
 
 + (NSURLSessionDataTask *)SafeGET:(NSString *)URLString
@@ -126,20 +144,25 @@ NSString *const kAFNetworkStateChange = @"AFNetworkStateChange";
                            failure:(void (^)(NSURLSessionDataTask * task, NSError *error))failure{
     APIManager *manager = [APIManager sharedManager];
     
-    return [manager GET:URLString parameters:parameters  progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-        //todo
-        success(task,responseObject);
+    return [manager GET:URLString parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        //todo
-        if (_sharedManager.reachabilityStatus == AFNetworkReachabilityStatusNotReachable) {
-            failure(task,error);
-        }
-        else
-        {
-//            [MBManager showBriefAlert:LOCALIZEDSTRING(@"paramError")];
-        }
+        
     }];
+//    return [manager GET:URLString parameters:parameters  progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+//        //todo
+//        success(task,responseObject);
+//
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        //todo
+//        if (_sharedManager.reachabilityStatus == AFNetworkReachabilityStatusNotReachable) {
+//            failure(task,error);
+//        }
+//        else
+//        {
+////            [MBManager showBriefAlert:LOCALIZEDSTRING(@"paramError")];
+//        }
+//    }];
 }
 - (NSURLSessionDownloadTask *)downloadFileWithURL:(NSString*)requestURLString
                  parameters:(NSDictionary *)parameters
@@ -152,23 +175,26 @@ NSString *const kAFNetworkStateChange = @"AFNetworkStateChange";
     
     AFHTTPRequestSerializer *serializer = [AFHTTPRequestSerializer serializer];
     NSMutableURLRequest *request =[serializer requestWithMethod:@"POST" URLString:requestURLString parameters:parameters error:nil];
-    NSURLSessionDownloadTask *task = [[AFHTTPSessionManager manager] downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
-        progress(downloadProgress);
-    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        return [NSURL fileURLWithPath:savedPath];
-    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        if(error){
-            if (_sharedManager.reachabilityStatus == AFNetworkReachabilityStatusNotReachable) {
-                failure(error);
-            }
-            else
-            {
-                [MBManager showBriefAlert:LOCALIZEDSTRING(@"paramError")];
-            }
-        }else{
-            success(response,filePath);
-        }
-    }];
+
+
+    NSURLSessionDownloadTask *task = nil;
+//    task = [[AFHTTPSessionManager manager] downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+//        progress(downloadProgress);
+//    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+//        return [NSURL fileURLWithPath:savedPath];
+//    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+//        if(error){
+//            if (_sharedManager.reachabilityStatus == AFNetworkReachabilityStatusNotReachable) {
+//                failure(error);
+//            }
+//            else
+//            {
+////                [MBManager showBriefAlert:LOCALIZEDSTRING(@"paramError")];
+//            }
+//        }else{
+//            success(response,filePath);
+//        }
+//    }];
     [task resume];
     
     return task;
